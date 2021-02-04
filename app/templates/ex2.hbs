@@ -1,8 +1,9 @@
 {{page-title "Ex2"}}
 
-<h1>Services</h1>
+<main>
+    <h1>Services</h1>
 
-<div>
+<div class="info">
     <p>Choisissez les éléments à inclure <br>
         <b>{{@model.countActive}} services sélectionnés</b>
     </p>
@@ -11,7 +12,7 @@
 
 <ul>
     {{#each @model.services as | serv |}}
-    <li><span>
+    <li  class={{if serv.active "active"}} ><span>
             {{serv.name}}
         </span>
         <span>
@@ -21,10 +22,10 @@
     {{/each}}
 
 </ul>
-<hr>
-<div>
+<div class="total">
     <span>Total : </span>
     <span>{{@model.sumActive}}</span>
 </div>
+</main>
 
 {{outlet}}
