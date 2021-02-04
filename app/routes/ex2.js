@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import Services from '../classes/services';
-import {datas} from '../data/datas';
+import {datas,promos} from '../data/datas';
 import { action } from '@ember/object';
 
 export default class Ex2Route extends Route {
@@ -8,5 +8,19 @@ export default class Ex2Route extends Route {
         return new Services(datas);
     }
 
-    
+    @action
+    toggleActive(service){
+        console.log(123);
+    if(service.active){
+      service = !service.active;
+    }
+    else {
+      service.active;
+    }
+
+    @action
+    showPromo(){
+        console.log(123);
+    }
+}
 }

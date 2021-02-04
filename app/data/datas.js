@@ -18,4 +18,10 @@ let datas = [
     }
 ];
 
-export{datas};
+let promos = {
+    B22: 0.05,
+    AZ: 0.01,
+    UBOAT: 0.02,
+  };
+  
+  export { datas, promos };
