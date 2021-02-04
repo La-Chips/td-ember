@@ -1,0 +1,30 @@
+{{page-title "Ex2"}}
+
+<h1>Services</h1>
+
+<div>
+    <p>Choisissez les éléments à inclure <br>
+        <b>{{@model.countActive}} services sélectionnés</b>
+    </p>
+</div>
+
+
+<ul>
+    {{#each @model.services as | serv |}}
+    <li><span>
+            {{serv.name}}
+        </span>
+        <span>
+            {{serv.price}}
+        </span>
+    </li>
+    {{/each}}
+
+</ul>
+<hr>
+<div>
+    <span>Total : </span>
+    <span>{{@model.sumActive}}</span>
+</div>
+
+{{outlet}}
