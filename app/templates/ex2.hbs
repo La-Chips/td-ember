@@ -12,7 +12,7 @@
 
 <ul>
     {{#each @model.services as | serv |}}
-    <li  class={{if serv.active "active"}} onclick="{{this.toogleActive}}"><span>
+    <li {{action "toggleActive" serv}}  class={{if serv.active "active"}} ><span>
             {{serv.name}}
         </span>
         <span>

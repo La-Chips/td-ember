@@ -8,19 +8,4 @@ export default class Ex2Route extends Route {
         return new Services(datas);
     }
 
-    @action
-    toggleActive(service){
-        console.log(123);
-    if(service.active){
-      service = !service.active;
-    }
-    else {
-      service.active;
-    }
-
-    @action
-    showPromo(){
-        console.log(123);
-    }
-}
 }
