@@ -1,0 +1,11 @@
+.button-container{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

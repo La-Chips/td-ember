@@ -1,6 +1,7 @@
 import {helper} from '@ember/component/helper';
  
 export function arrayContains(params) {
+  console.log(params);
   const [items, value] = params;
   return items.includes(value);
 }

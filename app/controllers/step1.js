@@ -3,17 +3,18 @@ import { action } from '@ember/object';
 
 export default class Step1Controller extends Controller {
     step = false;
-     dispoIems = [];
+     dispoItems = [];
      includeItems = [];
-     dispoIemsIds_ = [];
+     dispoItemsIds_ = [];
      includedItemsIds_ = [];
 
      @action addToIncluded(){
-        this.includeItems = this.dispoIemsIds_;
+        this.includeItems = this.dispoItemsIds_;
      }
 
      @action addAllToIncluded(){
-         this.includeItems = this.dispoIems;
+         this.includeItems = this.dispoItems;
+         console.log(this.includeItems);
      }
 
      @action removeFromIncluded(){
