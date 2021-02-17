@@ -1,12 +1,13 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 export default class Step1Controller extends Controller {
     step = false;
      dispoItems = [];
-     includeItems = [];
-     dispoItemsIds_ = [];
-     includedItemsIds_ = [];
+     @tracked includeItems = [];
+     @tracked dispoItemsIds_ = [];
+     @tracked includedItemsIds_ = [];
 
      @action addToIncluded(){
         this.includeItems = this.dispoItemsIds_;
@@ -23,6 +24,7 @@ export default class Step1Controller extends Controller {
 
      @action removeAllFromIncluded(){
          this.includeItems = [];
+         console.log(this.includeItems);
      }
 
      @action toogleStep(){

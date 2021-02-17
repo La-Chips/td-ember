@@ -6,7 +6,7 @@ export default class MultiSelectComponent extends Component {
   @tracked elements = [];
   selected = [];
   id = 'id';
-
+ 
   constructor() { 
     super(...arguments);
     this.elements = this.args.elements;
