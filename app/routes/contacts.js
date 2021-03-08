@@ -3,17 +3,19 @@ import MyContacts from '../classes/contacts';
 import { action } from '@ember/object';
 
 export default class ContactsRoute extends Route {
-  model(){
+  model() {
     return new MyContacts(this.store.findAll('contact')); //model contact
   }
 
-  @action delete(contact){
+  @action delete(contact) {
     contact.deleteRecord();
+    this.store.deleteRecord('contacts', contact)
+    console.log(contact);
   }
 
-  @action cancelDeletion(contacts){
+  @action cancelDeletion(contacts) {
     contacts.forEach(
-      (c)=>c.rollbackAttributes()
+      (c) => c.rollbackAttributes()
     )
   }
-  }
+}
