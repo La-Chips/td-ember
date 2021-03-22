@@ -1,6 +1,7 @@
 import abstractroute from './abstractroute';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
+import RSVP from 'rsvp';
 
 
 export default class BoardRoute extends abstractroute {
@@ -8,6 +9,15 @@ export default class BoardRoute extends abstractroute {
 
     model() {
         let user = this.userAuth.user;
+        if (user) {
+            return RSVP.hash({
+                orders: this.store.query('order', {
+                    filter: { idEmployee: user.email },
+                    include: 'orderdetails',
+                }),
+                employee: user,
+            });
+        }
     }
 
     @action logout() {
