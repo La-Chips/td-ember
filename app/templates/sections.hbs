@@ -6,8 +6,11 @@
     <fieldset>
         <legend>Gestion des sections</legend>
 
-        <div><button class="ui green button">Nouvelle section</button><button class="ui green button">Nouveau
-                produits</button></div>
+        <div>
+            <LinkTo @route="sections.add" class="ui green button">Nouvelle section</LinkTo><button
+                class="ui green button">Nouveau
+                produits</button>
+        </div>
         <h2>Sections ({{@model.length}})</h2>
         <table class="ui very basic collapsing celled table">
             {{#each @model as |section|}}
@@ -17,7 +20,7 @@
 
                 </td>
                 <td>
-                    ({{section.description}})
+                    {{section.description}}
                 </td>
                 <td>
                     <p>{{ section.products.length }}</p>
