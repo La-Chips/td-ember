@@ -7,9 +7,9 @@
         <legend>Gestion des sections</legend>
 
         <div>
-            <LinkTo @route="sections.add" class="ui green button">Nouvelle section</LinkTo><button
-                class="ui green button">Nouveau
-                produits</button>
+            <LinkTo @route="sections.add" class="ui green button">Nouvelle section</LinkTo>
+            <LinkTo @route="sections.addProduct" class="ui green button">Nouveau
+                produits</LinkTo>
         </div>
         <h2>Sections ({{@model.length}})</h2>
         <table class="ui very basic collapsing celled table">
