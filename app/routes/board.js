@@ -12,8 +12,8 @@ export default class BoardRoute extends abstractroute {
         if (user) {
             return RSVP.hash({
                 orders: this.store.query('order', {
-                    filter: { idEmployee: user.email },
-                    include: 'orderdetails',
+                    filter: { idEmployee: user.id },
+                    include: 'orderdetail',
                 }),
                 employee: user,
             });
