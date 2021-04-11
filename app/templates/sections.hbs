@@ -12,6 +12,7 @@
                 produits</LinkTo>
         </div>
         <h2>Sections ({{@model.length}})</h2>
+        {{outlet}}
         <table class="ui very basic collapsing celled table">
             {{#each @model as |section|}}
             <tr>
@@ -26,7 +27,8 @@
                     <p>{{ section.products.length }}</p>
                 </td>
                 <td>
-                    <button class="ui blue button"><i class="edit icon"></i></button>
+                    <LinkTo @route="sections.edit" @model={{section.id}} class="ui blue button"><i
+                            class="edit icon"></i></LinkTo>
                 </td>
                 <td><button class="ui red button">
                         <i class="remove icon"></i>
@@ -34,13 +36,11 @@
             </tr>
 
 
-
             {{/each}}
+
         </table>
 
     </fieldset>
 
 
 </div>
-
-{{outlet}}
