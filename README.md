@@ -1,7 +1,18 @@
-# ember-app
+# Store Ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+En raison de la crise sanitaire, beaucoup de magasins ou de commerçants ont recours de manière exceptionnelle à la vente à emporter.
+Beaucoup d'entre eux n'ont pas à leur disposition une application Web leur permettant de gérer cette activité.
+
+L'objectif de l'application décrite ci-dessous est de répondre à ce nouveau besoin :
+
+    Pour le client : lui permettre de préparer ses commandes en ligne et de convenir d'un moment pour venir les chercher (app full-stack Ubiquity).
+    Pour le commerçant : gérer la préparation des commandes et les retraits (app EmberJS).
+
+
+## MCD
+
+![20210308-012646](https://user-images.githubusercontent.com/75272120/113115167-6ebbdb00-920c-11eb-9a29-0cde04a8986d.png)
+
 
 ## Prerequisites
 
